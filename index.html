@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Encryption Tool</title>
+        <link href="http://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <a class="back"></a>
+
+        <div id="stage">
+
+            <div id="step1">
+              <div class="bgdiv">
+                <img class="img1" src="https://duncannagle.com/wp-content/uploads/2017/02/Russ-cyber-storm-800x445.jpg">
+
+              </div>
+                <div class="content">
+                  <h1><u>Encryption Tool</u></h1>
+                    <h1>What do you want to do?</h1>
+                    <a class="button encrypt green">Encrypt a file</a>
+                    <a class="button decrypt magenta">Decrypt a file</a>
+                </div>
+            </div>
+
+            <div id="step2">
+
+                <div class="content if-encrypt">
+                    <h1>Choose a file that you want to encrypt</h1>
+                    <h2>An encrypted copy of the file will be generated. No data is sent to our server.</h2>
+                    <a class="button browse blue">Browse</a>
+
+                    <input type="file" id="encrypt-input">
+                </div>
+
+                <div class="content if-decrypt">
+                    <h1>Choose a file that you want to decrypt</h1>
+                    <h2>Only files encrypted by this tool are accepted.</h2>
+                    <a class="button browse blue">Browse</a>
+
+                    <input type="file" id="decrypt-input" />
+                </div>
+
+            </div>
+
+            <div id="step3">
+              <div>
+                <img class="img2" src="https://i1.wp.com/peterstechlab.com/wp-content/uploads/2020/03/pgp-encryption-hero.png?fit=1240%2C414&ssl=1">
+              </div>
+
+                <div class="content if-encrypt">
+                    <h1>Enter a pass phrase</h1>
+                    <h2>This phrase will be used as an encryption key. Write it down or remember it; you won't be able to restore the file without it. </h2>
+
+                    <input type="password" />
+                    <a class="button process red">Encrypt!</a>
+                </div>
+
+                <div class="content if-decrypt">
+                    <h1>Enter the pass phrase</h1>
+                    <h2>Enter the pass phrase that was used to encrypt this file. It is not possible to decrypt it without it.</h2>
+
+                    <input type="password" />
+                    <a class="button process red">Decrypt!</a>
+                </div>
+
+            </div>
+
+            <div id="step4">
+
+                <div class="content">
+                    <h1>Your file is ready!</h1>
+                    <a class="button download green">Download</a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+    <script src="javascript/aes.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="javascript/index.js"></script>
+
+</html>
